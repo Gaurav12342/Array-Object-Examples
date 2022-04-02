@@ -17,3 +17,9 @@ data = {
     },
     hobby: ['cricket', 'music']
 }
+
+const getKeyValue = (keyName, data) => {
+    console.log("Output =>", data[keyName]);
+}
+
+getKeyValue("name", data);
