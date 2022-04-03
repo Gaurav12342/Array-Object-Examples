@@ -1,5 +1,6 @@
 /**
- *  write code which data of who have hobby of cricket */
+ *  write code which add gender as male in every record
+ * */
 
 data = [
     {
@@ -59,15 +60,13 @@ data = [
     },
 ];
 
-const getData = (data, hobbyValue) => {
-    let result = [];
+const addGender = (getGender) => {
     data?.map((dd) => {
-        dd?.hobby?.map((dd1) => {
-            return dd1 === hobbyValue && result.push(dd);
-        });
-    })
+        dd['gender'] = getGender
+        // dd.gender = getGender
+    });
 
-    console.log("result =>", result);
-}
+    console.log("Data", data);
+};
 
-getData(data, 'singing');
+addGender("male");

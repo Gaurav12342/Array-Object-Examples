@@ -1,5 +1,6 @@
 /**
- *  write code which data of who have hobby of cricket */
+ *  write code  for which remove record who have hobyy as 'Cricket' and city is 'surat' and reurn new array
+ * */
 
 data = [
     {
@@ -59,15 +60,16 @@ data = [
     },
 ];
 
-const getData = (data, hobbyValue) => {
-    let result = [];
-    data?.map((dd) => {
-        dd?.hobby?.map((dd1) => {
-            return dd1 === hobbyValue && result.push(dd);
-        });
-    })
+const removeArrayObject = (data, hobbyData, cityData) => {
+    // data?.map((dd, index) => {
+    //     dd?.hobby?.map((ss) => {
+    //         if (ss === hobbyData && dd.address.city === cityData) {
+    //             return data?.splice(0, index);
+    //         }
+    //     })
+    // });
 
-    console.log("result =>", result);
+    // console.log("result =>", data);
 }
 
-getData(data, 'singing');
+removeArrayObject(data, "cricket", "Surat");

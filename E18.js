@@ -1,5 +1,6 @@
 /**
- *  write code which data of who have hobby of cricket */
+ *  write code  for return new array of object which contain only id,name,age
+ * */
 
 data = [
     {
@@ -59,15 +60,13 @@ data = [
     },
 ];
 
-const getData = (data, hobbyValue) => {
+const newArrayObject = (data) => {
     let result = [];
     data?.map((dd) => {
-        dd?.hobby?.map((dd1) => {
-            return dd1 === hobbyValue && result.push(dd);
-        });
-    })
+        result.push({ "Id": dd?.id, "Name": dd?.name, "Age": dd?.age });
+    });
 
-    console.log("result =>", result);
+    console.log("Data =>", result);
 }
 
-getData(data, 'singing');
+newArrayObject(data)

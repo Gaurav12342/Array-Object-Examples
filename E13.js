@@ -1,5 +1,5 @@
 /**
- *  write code which data of who have hobby of cricket */
+ *  write code which return array of unique city*/
 
 data = [
     {
@@ -58,16 +58,3 @@ data = [
         hobby: ["singing", "music"],
     },
 ];
-
-const getData = (data, hobbyValue) => {
-    let result = [];
-    data?.map((dd) => {
-        dd?.hobby?.map((dd1) => {
-            return dd1 === hobbyValue && result.push(dd);
-        });
-    })
-
-    console.log("result =>", result);
-}
-
-getData(data, 'singing');

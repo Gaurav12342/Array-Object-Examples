@@ -1,5 +1,6 @@
 /**
- *  write code which data of who have hobby of cricket */
+ *  write code which add 2 years of every person
+ * */
 
 data = [
     {
@@ -59,15 +60,13 @@ data = [
     },
 ];
 
-const getData = (data, hobbyValue) => {
-    let result = [];
-    data?.map((dd) => {
-        dd?.hobby?.map((dd1) => {
-            return dd1 === hobbyValue && result.push(dd);
-        });
-    })
 
-    console.log("result =>", result);
+const addingYears = (arrayData, yearsData) => {
+    arrayData.map((dd) => {
+        dd.years = yearsData
+    });
+    console.log("Result =>", arrayData);
 }
 
-getData(data, 'singing');
+const yearsArray = [2020, 2021];
+addingYears(data, yearsArray);

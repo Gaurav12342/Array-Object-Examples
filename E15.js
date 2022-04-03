@@ -1,5 +1,6 @@
 /**
- *  write code which data of who have hobby of cricket */
+ *  write code which return unique hobby
+ * */
 
 data = [
     {
@@ -59,15 +60,8 @@ data = [
     },
 ];
 
-const getData = (data, hobbyValue) => {
-    let result = [];
-    data?.map((dd) => {
-        dd?.hobby?.map((dd1) => {
-            return dd1 === hobbyValue && result.push(dd);
-        });
-    })
-
-    console.log("result =>", result);
+const checkHobby = (data) => {
 }
 
-getData(data, 'singing');
+// const customHobby = ['singing', 'music', 'gaming'];
+checkHobby(data);
