@@ -10,6 +10,16 @@ const getValueUsingMap = (data, userValue) => {
     })
 }
 
+// Using for loop
+let ans1 = {};
+const getValueUsingLoop = (data, userValue) => {
+    for (let i = 0; i < data.length; i++) {
+        if (data[i]['name'] === userValue) {
+            return ans1 = data[i];
+        }
+    }
+}
+
 const userArray = [
     { id: 1, name: "Test", city: "surat" },
     { id: 2, name: "Test-1", city: "bardoli" },
@@ -17,7 +27,11 @@ const userArray = [
     { id: 4, name: "Test-3", city: "Piplod" },
     { id: 5, name: "Test-4", city: "Pune" },
 ];
+
 getValueUsingMap(userArray, "Test-4");
+getValueUsingLoop(userArray, "Test-3");
+
 console.log("Ans =>", ans);
+console.log("Ans-1 =>", ans1);
 
 
