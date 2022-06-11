@@ -5,17 +5,37 @@ let ans = {};
 const getValueUsingMap = (data, userValue) => {
     data?.map((dd, index) => {
         if (dd["name"] == userValue) {
-            return ans = dd;
+            ans = dd;
         }
     })
 }
 
 // Using for loop
 let ans1 = {};
-const getValueUsingLoop = (data, userValue) => {
+const getValueUsingForLoop = (data, userValue) => {
     for (let i = 0; i < data.length; i++) {
         if (data[i]['name'] === userValue) {
-            return ans1 = data[i];
+            ans1 = data[i];
+        }
+    }
+}
+
+// Using for of loop
+let ans2 = {};
+const getValueUsingForOfLoop = (data, userValue) => {
+    for (const userData of data) {
+        if (userData['name'] === userValue) {
+            ans2 = userData;
+        }
+    }
+}
+
+// Using for in loop
+let ans3 = {};
+const getValueUsingForInLoop = (data, userValue) => {
+    for (const userData in data) {
+        if (data[userData]['name'] === userValue) {
+            ans3 = data[userData];
         }
     }
 }
@@ -29,9 +49,13 @@ const userArray = [
 ];
 
 getValueUsingMap(userArray, "Test-4");
-getValueUsingLoop(userArray, "Test-3");
+getValueUsingForLoop(userArray, "Test-3");
+getValueUsingForOfLoop(userArray, "Test-2");
+getValueUsingForInLoop(userArray, "Test");
 
 console.log("Ans =>", ans);
 console.log("Ans-1 =>", ans1);
+console.log("Ans-2 =>", ans2);
+console.log("Ans-3 =>", ans3);
 
 
